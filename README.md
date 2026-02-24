@@ -4,7 +4,6 @@ Trage dazu bei, das SgoVi-Web sicherer zu machen. Reiche neue Domains ein, melde
 # 🛡️ SgoVi Website Checker Extension
 
 [![Lizenz: MIT](https://img.shields.io/badge/Lizenz-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Community Project](https://img.shields.io/badge/SgoVi-Open%20Source-blue.svg)]()
 
 Die **SgoVi Website Checker Extension** ist ein kollaboratives Werkzeug, um das **SgoVi-Web** sicher auf- und auszubauen. Mit dieser Extension kann jeder Nutzer aktiv dazu beitragen, neue Webseiten in die SgoVi-Warteschlange einzureichen oder Domains zu identifizieren, die gegen die Richtlinien verstoßen.
 
