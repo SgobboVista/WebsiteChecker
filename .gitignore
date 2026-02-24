@@ -1,0 +1,20 @@
+# --- Editor & System ---
+*.code-workspace
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- User-Daten & Logs (Datenschutz) ---
+# Diese Daten ändern sich ständig und blähen das Backup unnötig auf
+*.db-shm
+*.db-wal
+users.db
+submit.db
+banned_log.db
+intern/admin/rate_limit_*.json
+/logs/*.log
+/temp/
+
+# --- Backup-Ausnahmen ---
+# Falls du bestimmte DBs DOCH im Git-Backup haben willst, 
+# kommentiere die entsprechende Zeile oben mit # aus.

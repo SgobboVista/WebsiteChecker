@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { 
+            width: 210px; 
+            background: #0f172a; 
+            color: #f8fafc; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            padding: 15px; 
+            font-size: 12px; 
+        }
+        h3 { 
+            color: #818cf8; 
+            margin: 0 0 12px 0; 
+            font-size: 14px; 
+            text-align: center; 
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+        .row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            padding: 8px; 
+            background: #1e293b; 
+            border-radius: 6px; 
+        }
+        .btn-action { 
+            width: 100%; 
+            background: #4f46e5; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 11px;
+            transition: background 0.2s;
+        }
+        .btn-action:hover { background: #4338ca; }
+        .toggle { 
+            cursor: pointer; 
+            padding: 4px 10px; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            font-size: 10px; 
+            text-transform: uppercase;
+        }
+        .on { background: #10b981; color: white; }
+        .off { background: #ef4444; color: white; }
+        .footer { 
+            margin-top: 12px; 
+            font-size: 10px; 
+            color: #64748b; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <h3>SGOVI Control</h3>
+    
+    <div class="row">
+        <span>Google Engine</span>
+        <span id="statusBtn" class="toggle on">AN</span>
+    </div>
+
+    <button id="scanBtn" class="btn-action">🔍 AKTUELLE SEITE SCANNEN</button>
+    
+    <div class="footer">SGOVI Engine v15.0</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
