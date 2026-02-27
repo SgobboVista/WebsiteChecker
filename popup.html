@@ -3,74 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { 
-            width: 210px; 
-            background: #0f172a; 
-            color: #f8fafc; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            padding: 15px; 
-            font-size: 12px; 
+        body {
+            width: 220px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 12px;
+            background: #111113;
+            color: #fff;
+            margin: 0;
         }
-        h3 { 
-            color: #818cf8; 
-            margin: 0 0 12px 0; 
-            font-size: 14px; 
-            text-align: center; 
-            border-bottom: 1px solid #1e293b;
-            padding-bottom: 8px;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
         }
-        .row { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 15px; 
-            padding: 8px; 
-            background: #1e293b; 
-            border-radius: 6px; 
+        .logo { font-weight: 800; font-size: 16px; color: #8b5cf6; }
+        
+        .switch-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #18181b;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #27272a;
         }
-        .btn-action { 
-            width: 100%; 
-            background: #4f46e5; 
-            color: white; 
-            border: none; 
-            padding: 10px; 
-            border-radius: 6px; 
-            cursor: pointer; 
-            font-weight: 600; 
+        
+        .label { font-size: 12px; font-weight: 500; }
+
+        /* Stylish Toggle */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #3f3f46;
+            transition: .4s;
+            border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px; width: 14px;
+            left: 3px; bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #8b5cf6; }
+        input:checked + .slider:before { transform: translateX(14px); }
+
+        .btn-bulk {
+            width: 100%;
+            margin-top: 12px;
+            background: #27272a;
+            color: #e4e4e7;
+            border: 1px solid #3f3f46;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
             font-size: 11px;
-            transition: background 0.2s;
+            font-weight: 600;
+            transition: 0.2s;
         }
-        .btn-action:hover { background: #4338ca; }
-        .toggle { 
-            cursor: pointer; 
-            padding: 4px 10px; 
-            border-radius: 4px; 
-            font-weight: bold; 
-            font-size: 10px; 
-            text-transform: uppercase;
-        }
-        .on { background: #10b981; color: white; }
-        .off { background: #ef4444; color: white; }
-        .footer { 
-            margin-top: 12px; 
-            font-size: 10px; 
-            color: #64748b; 
-            text-align: center; 
+        .btn-bulk:hover { background: #3f3f46; border-color: #52525b; }
+        
+        .footer {
+            margin-top: 12px;
+            font-size: 9px;
+            color: #52525b;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h3>SGOVI Control</h3>
-    
-    <div class="row">
-        <span>Google Engine</span>
-        <span id="statusBtn" class="toggle on">AN</span>
+    <div class="header">
+        <span class="logo">SGOVI</span>
+        <span style="font-size: 10px; color: #10b981;">v31.2</span>
     </div>
 
-    <button id="scanBtn" class="btn-action">🔍 AKTUELLE SEITE SCANNEN</button>
-    
-    <div class="footer">SGOVI Engine v15.0</div>
+    <div class="switch-container">
+        <span class="label" id="text-enable">Website Checker</span>
+        <label class="switch">
+            <input type="checkbox" id="check-enabled" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
 
+    <button class="btn-bulk" id="btn-scan">
+        🔍 <span id="text-scan">Seite scannen</span>
+    </button>
+
+    <div class="footer">
+        &copy; 2026 SgobboVista Search
+    </div>
+
+    <script src="lang.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
